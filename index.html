@@ -572,10 +572,39 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
-  nav { padding: 1rem 4%; }
-  .nav-links { gap: 1rem; }
-  .nav-links a, .nav-dropdown-toggle { font-size: 0.7rem; letter-spacing: 0.8px; }
-}
+    /* Stack logo and links vertically on mobile so they aren't cramped */
+    nav {
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1rem 5%;
+    }
+    
+    .nav-logo-img { 
+      height: 48px; /* Slightly smaller logo for mobile */
+    }
+
+    .nav-links {
+      gap: 1.25rem;
+    }
+
+    .nav-links a, .nav-dropdown-toggle {
+      font-size: 0.72rem;
+      letter-spacing: 0.8px;
+    }
+
+    /* Reduce excessive vertical spacing on phone screens */
+    .hero {
+      padding: 7rem 5% 4rem; /* Cuts down the massive top/bottom gaps */
+    }
+
+    .page-wrap {
+      padding: 5rem 5% 4rem;
+    }
+
+    .contact-section {
+      padding: 4rem 5%;
+    }
+  }
 </style>
 </head>
 <body>
